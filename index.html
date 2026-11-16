@@ -1,0 +1,226 @@
+HTML
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6087 の自己紹介</title>
+  <style>
+    :root {
+      --bg-base: #f6f3fb;
+      --bg-surface: #ffffff;
+      --purple-light: #ebe2f8;
+      --purple-mid: #d6c4f0;
+      --purple-accent: #7a57b5;
+      --purple-dark: #47316e;
+      --text-main: #2d2538;
+      --text-sub: #584c6b;
+      --border-color: #dfd3f2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.8;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    /* ヘッダー */
+    header {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-top: 6px solid var(--purple-accent);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--purple-light);
+      color: var(--purple-dark);
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--purple-dark);
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+    }
+
+    /* ページ内メニュー */
+    nav {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 16px;
+    }
+
+    nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--purple-dark);
+      font-weight: bold;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background-color: var(--bg-base);
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: var(--purple-mid);
+      color: var(--purple-dark);
+    }
+
+    /* セクション共通 */
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      color: var(--purple-dark);
+      border-left: 5px solid var(--purple-accent);
+      padding-left: 12px;
+      margin-bottom: 14px;
+    }
+
+    section p {
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    /* 広い画面向けの2カラム配置 */
+    .grid-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 680px) {
+      .container {
+        padding: 40px 24px 64px;
+      }
+
+      header {
+        padding: 40px 32px;
+      }
+
+      header h1 {
+        font-size: 2.35rem;
+      }
+
+      .grid-group {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 28px;
+      }
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">大学1年生</span>
+      <h1>6087</h1>
+      <p>同級生のみなさんへ向けた自己紹介ページです。</p>
+    </header>
+
+    <nav aria-label="ページ内メニュー">
+      <ul>
+        <li><a href="#about">はじめに</a></li>
+        <li><a href="#study">学んでいること</a></li>
+        <li><a href="#goal">今後の目標</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2>はじめに</h2>
+        <p>
+          はじめまして、大学1年生の6087です。同級生のみなさんに自分のことを知ってもらうためにこのページを作りました。これからよろしくお願いします。
+        </p>
+      </section>
+
+      <div class="grid-group">
+        <section id="study">
+          <h2>学んでいること</h2>
+          <p>
+            現在は大学で情報系の分野を学んでいます。日々の講義や課題を通して、基礎からしっかりと知識を身につけているところです。
+          </p>
+        </section>
+
+        <section id="goal">
+          <h2>今後の目標</h2>
+          <p>
+            今後の目標は教員免許を取ることです。大学での学びを大切にしながら、目標の達成に向けて計画的に取り組んでいきます。
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>6087 自己紹介ページ</p>
+    </footer>
+  </div>
+</body>
+</html>
